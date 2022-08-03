@@ -34,7 +34,7 @@ SetClass = [Literals, Variables, Expressions, Comprehensions, Statements,
 def choose_option():
     """ Choose option. """
     if type_option == 'directory':
-        repo = option.split('/')[-1]
+        repo = os.path.basename(option)
         read_Directory(option, repo)
     elif type_option == 'repo-url':
         request_url()
