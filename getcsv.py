@@ -50,7 +50,8 @@ def read_FileCsv(file_csv=""):
         reader = csv.reader(File)
         myDataList = []
         for row in reader:
-            myDataList.append(row)
+            if len(row) != 0:
+                myDataList.append(row)
 
         create_csv(myDataList)
 
